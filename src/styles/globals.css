@@ -1,0 +1,12 @@
+.ra3-picker .react-colorful {
+  width: 220px;
+  height: 200px;
+}
+.ra3-picker .react-colorful__saturation {
+  border-radius: 8px 8px 0 0;
+}
+.ra3-picker .react-colorful__hue {
+  height: 16px;
+  border-radius: 0 0 8px 8px;
+  margin-top: 8px;
+}
