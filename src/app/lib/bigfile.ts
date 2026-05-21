@@ -69,13 +69,13 @@ export const OPTIMAL_V34: ColorMap = {
 };
 
 export const SHIFTED_SPECTRUM: ColorMap = {
-  ColorRed: "#E51743",
-  ColorOrange: "#E58217",
-  ColorGold: "#D8E517",
-  ColorGreen: "#17E5AE",
-  ColorSkyBlue: "#17BEE5",
-  ColorBlue: "#176BE5",
-  ColorPurple: "#E517DE",
+  ColorRed: "#730008",
+  ColorOrange: "#E57D22",
+  ColorGold: "#CBE522",
+  ColorGreen: "#06731C",
+  ColorSkyBlue: "#39DAE5",
+  ColorBlue: "#005473",
+  ColorPurple: "#E500E5",
 };
 
 const TEMPLATE_URLS: Record<number, string> = {
