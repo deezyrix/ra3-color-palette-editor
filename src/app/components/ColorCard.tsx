@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { isValidHex } from "../lib/bigfile";
 import { hexToRgb, hsvToRgb, rgbToHex, rgbToHsv } from "../lib/color";
+import { getReadableColorName } from "../lib/colorNames";
 
 type Props = {
   id: string;
@@ -81,6 +82,8 @@ export function ColorCard({ id, name, value, isCustom, onChange, onReset, onDele
   const valid = isValidHex(draft);
   const rgb = hexToRgb(value);
   const hsv = rgbToHsv(rgb);
+  const readableName = getReadableColorName(value);
+  const slotContext = `${name} slot · ${id}`;
 
   const apply = (hex: string) => {
     const up = hex.toUpperCase();
@@ -98,8 +101,8 @@ export function ColorCard({ id, name, value, isCustom, onChange, onReset, onDele
     <div className="group flex flex-col gap-2.5 rounded-lg border border-border bg-card p-3 shadow-sm transition-colors hover:border-foreground/25">
       <div className="flex items-start justify-between gap-2 min-w-0">
         <div className="min-w-0">
-          <div className="truncate text-sm font-medium leading-tight">{name}</div>
-          <div className="truncate text-[11px] text-muted-foreground">{id}</div>
+          <div className="truncate text-sm font-medium leading-tight">{readableName}</div>
+          <div className="truncate text-[11px] text-muted-foreground">{slotContext}</div>
         </div>
         {isCustom ? (
           <button
