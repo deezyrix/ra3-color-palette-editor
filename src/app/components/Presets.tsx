@@ -10,7 +10,7 @@ type Props = {
 
 const PRESETS: PresetDef[] = [
   { key: "original", name: "Original", description: "Stock in-game palette", colors: ORIGINAL_COLORS },
-  { key: "optimal", name: "Optimal", description: "Community-tuned readability", colors: OPTIMAL_V34 },
+  { key: "optimal", name: "Optimal", description: "Balanced readability and visual appeal", colors: OPTIMAL_V34 },
   { key: "shifted-spectrum", name: "Arcade High-Separation", description: "High-contrast colors for quick player recognition", colors: SHIFTED_SPECTRUM },
 ];
 
