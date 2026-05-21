@@ -119,7 +119,7 @@ export function ColorCard({ id, name, value, isCustom, canReset, onChange, onRes
             aria-label={`Reset ${name}`}
             title="Reset to original"
             onClick={onReset}
-            className="rounded p-1 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="animate-in fade-in zoom-in-95 rounded p-1 text-muted-foreground transition-[background-color,color,opacity,transform] duration-200 hover:bg-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             <RotateCcw className="h-3.5 w-3.5" />
           </button>
