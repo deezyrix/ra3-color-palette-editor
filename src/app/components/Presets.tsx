@@ -32,13 +32,19 @@ export function Presets({ onApply, activeKey }: Props) {
               <div className="truncate text-xs text-muted-foreground">{p.description}</div>
             </div>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex w-full items-center gap-1" aria-hidden="true">
             {COLOR_IDS.map((id) => (
-              <span
+              <div
                 key={id}
                 title={id}
-                className="h-6 flex-1 rounded ring-1 ring-inset ring-black/10"
-                style={{ backgroundColor: p.colors[id] }}
+                className="rounded ring-1 ring-inset ring-black/10"
+                style={{
+                  backgroundColor: p.colors[id],
+                  display: "block",
+                  flex: "1 1 0",
+                  height: "1.5rem",
+                  minWidth: "1rem",
+                }}
               />
             ))}
           </div>
