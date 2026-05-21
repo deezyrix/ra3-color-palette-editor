@@ -13,6 +13,7 @@ type Props = {
   name: string;
   value: string;
   isCustom?: boolean;
+  canReset?: boolean;
   onChange: (hex: string) => void;
   onReset?: () => void;
   onDelete?: () => void;
@@ -71,7 +72,7 @@ function NumField({
   );
 }
 
-export function ColorCard({ id, name, value, isCustom, onChange, onReset, onDelete }: Props) {
+export function ColorCard({ id, name, value, isCustom, canReset, onChange, onReset, onDelete }: Props) {
   const [draft, setDraft] = useState(value);
   const [copied, setCopied] = useState(false);
 
@@ -113,15 +114,17 @@ export function ColorCard({ id, name, value, isCustom, onChange, onReset, onDele
           >
             <X className="h-3.5 w-3.5" />
           </button>
-        ) : (
+        ) : canReset ? (
           <button
             aria-label={`Reset ${name}`}
             title="Reset to original"
             onClick={onReset}
-            className="rounded p-1 text-muted-foreground opacity-0 transition-opacity hover:bg-accent hover:text-foreground group-hover:opacity-100 focus:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="rounded p-1 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             <RotateCcw className="h-3.5 w-3.5" />
           </button>
+        ) : (
+          <span className="h-5 w-5 shrink-0" aria-hidden="true" />
         )}
       </div>
 

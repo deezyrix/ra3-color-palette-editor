@@ -38,6 +38,7 @@ export function ColorEditor({ colors, customs, onChange, onAddCustom, onDeleteCu
             id={id}
             name={FRIENDLY_NAMES[id]}
             value={colors[id]}
+            canReset={(colors[id] ?? "").toUpperCase() !== ORIGINAL_COLORS[id].toUpperCase()}
             onChange={(hex) => setOne(id, hex)}
             onReset={() => resetOne(id)}
           />
