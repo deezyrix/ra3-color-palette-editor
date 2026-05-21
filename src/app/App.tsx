@@ -90,7 +90,7 @@ export default function App() {
             <div className="min-w-0">
               <div className="truncate font-medium leading-tight">RA3 Color Palette Editor</div>
               <div className="hidden text-xs text-muted-foreground sm:block">
-                Player color palette editor for C&C: Red Alert 3
+                Skirmish colors editor for C&C: Red Alert 3
               </div>
             </div>
           </div>
