@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { ThemeSwitcher } from "./components/ThemeSwitcher";
 import { Hero } from "./components/Hero";
 import { Presets } from "./components/Presets";
@@ -138,6 +139,7 @@ export default function App() {
       </main>
 
       <BackToTop />
+      <Analytics />
     </div>
   );
 }
