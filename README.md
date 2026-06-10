@@ -69,27 +69,6 @@ Preview the production build:
 npm run preview
 ```
 
-## Vercel Deployment
-
-This repository is ready for Vercel as a Vite static site.
-
-Vercel settings:
-
-- Framework preset: `Vite`
-- Build command: `npm run build`
-- Output directory: `dist`
-- Install command: default npm install
-
-The included `vercel.json` already defines the build command and output directory.
-
-## Repository Structure
-
-```txt
-public/       Browser icons and static public assets.
-src/          React app source.
-src/imports/  Bundled BIG templates and comparison images used by the app.
-```
-
 ## Disclaimer
 
 Unofficial fan-made tool. Use modified game files at your own risk. Some communities or tournaments may not allow modified files.
