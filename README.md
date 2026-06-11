@@ -4,12 +4,9 @@ Client-side color palette editor for **Command & Conquer: Red Alert 3**. The app
 
 The tool runs fully in the browser. Imported BIG files are processed locally and are not uploaded anywhere.
 
-Visit ra3-colors.vercel.app or install it on your PC.
-
 ## Get Started
 
 Use the web version at [ra3-colors.vercel.app](https://ra3-colors.vercel.app), or install it on your PC for easier access.
-
 
 ## Features
 
